@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Radar arcs -->
+  <circle cx="32" cy="36" r="28" stroke="#00e5ff" stroke-width="2" stroke-opacity="0.25"/>
+  <circle cx="32" cy="36" r="19" stroke="#00e5ff" stroke-width="2" stroke-opacity="0.45"/>
+  <circle cx="32" cy="36" r="10" stroke="#00e5ff" stroke-width="2" stroke-opacity="0.7"/>
+  <!-- Center dot -->
+  <circle cx="32" cy="36" r="3" fill="#00e5ff"/>
+  <!-- Sweep line -->
+  <line x1="32" y1="36" x2="52" y2="14" stroke="#00e5ff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <!-- Blip on sweep -->
+  <circle cx="46" cy="20" r="2.5" fill="#00e5ff" opacity="0.85"/>
+  <!-- Top signal bars (Bluetooth-style) -->
+  <path d="M26 10 L32 4 L38 10" stroke="#00e5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+</svg>
