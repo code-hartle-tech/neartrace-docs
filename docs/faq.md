@@ -36,4 +36,4 @@ Entirely on your device. Scan history in a Room (SQLite) database, photos in the
 
 ## How do I report a bug or request a feature?
 
-[Open an issue on GitHub](https://github.com/code-hartle-tech/neartrace-android-mvp/issues) or email [robert@hartle.tech](mailto:robert@hartle.tech).
+[Open an issue on GitHub](https://github.com/code-hartle-tech/neartrace-android-mvp/issues) or email [contact@hartle.tech](mailto:contact@hartle.tech).
