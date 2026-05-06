@@ -30,6 +30,7 @@ export default defineConfig({
           { text: 'What is NearTrace?', link: '/guide/getting-started' },
           { text: 'Install & Permissions', link: '/guide/install' },
           { text: 'Your First Scan', link: '/guide/first-scan' },
+          { text: 'Enrollment CLI', link: '/guide/enrollment' },
         ],
       },
       {
