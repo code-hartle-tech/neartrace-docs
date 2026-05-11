@@ -46,6 +46,18 @@ export default defineConfig({
         ],
       },
       {
+        text: '🦇 Nosferato',
+        collapsed: true,
+        items: [
+          { text: 'What is Nosferato?',  link: '/nosferato/' },
+          { text: 'Build & flash the SD', link: '/nosferato/build' },
+          { text: 'First boot',           link: '/nosferato/first-boot' },
+          { text: 'Reach the rig',        link: '/nosferato/reach' },
+          { text: 'The tool stack',       link: '/nosferato/tools' },
+          { text: 'Pair with NearTrace',  link: '/nosferato/pair' },
+        ],
+      },
+      {
         text: '📖 Reference',
         items: [
           { text: 'FAQ', link: '/faq' },
