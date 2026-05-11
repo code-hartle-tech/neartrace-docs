@@ -16,7 +16,7 @@ Single-shot from a Mac on Apple Silicon. Whole thing takes ~15 min.
 ```sh
 git checkout nosferato
 chmod +x infra/nosferato/bootstrap/*.sh infra/nosferato/firstboot/*.sh
-sudo infra/nosferato/bootstrap/build.sh
+infra/nosferato/bootstrap/build.sh
 ```
 
 The script:
