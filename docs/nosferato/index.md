@@ -7,11 +7,15 @@ defensive-framed, observation-grade. Some things you can't do from
 inside that box. **Nosferato** is the body the protocol slips into
 when it leaves.
 
-A Raspberry Pi Zero 2 W, custom-built from a vanilla Debian
-debootstrap with **no systemd**, runs the wireless layer NearTrace
-can't reach: monitor mode, packet injection, real EAPOL handshake
-capture, deauth probes, BLE active enumeration. The phone stays the
-UI. The Pi grows the fangs.
+A Raspberry Pi Zero 2 W runs **NosferatOS** — our custom OS built
+from a vanilla Debian debootstrap with **no systemd**. It handles the
+wireless layer NearTrace can't reach: monitor mode, packet injection,
+real EAPOL handshake capture, deauth probes, BLE active enumeration.
+The phone stays the UI. The Pi grows the fangs.
+
+> Nosferato is the brand. NosferatOS is the OS it ships.
+> Same root, same vampire heritage — different identities.
+> See [release channels](./channels) for daily / weekly / stable.
 
 ## What it is
 

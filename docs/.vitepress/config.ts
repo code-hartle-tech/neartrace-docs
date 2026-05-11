@@ -50,6 +50,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'What is Nosferato?',  link: '/nosferato/' },
+          { text: 'Release channels',    link: '/nosferato/channels' },
           { text: 'Build & flash the SD', link: '/nosferato/build' },
           { text: 'First boot',           link: '/nosferato/first-boot' },
           { text: 'Reach the rig',        link: '/nosferato/reach' },
