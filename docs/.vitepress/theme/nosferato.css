@@ -1,0 +1,322 @@
+/* ============================================================
+   🦇 NOSFERATO theme overrides
+   NOS (Nitrous Oxide / underground racing)
+   + FERA (Latin/PT/ES "beast")
+   + RATO (PT/ES "rat", urban hacker mascot)
+
+   Applied only to body.is-nosferato (set via theme/index.ts router hook).
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Major+Mono+Display&family=JetBrains+Mono:wght@400;700&display=swap');
+
+body.is-nosferato {
+  /* Palette anchors */
+  --nf-blood:    #b71c1c;   /* deep arterial red */
+  --nf-blood-2:  #ff1744;   /* fresh arterial — for accents */
+  --nf-bone:     #f4e9d8;   /* candle-lit parchment */
+  --nf-neon-m:   #ff00aa;   /* hot-magenta neon — NOS racing accent */
+  --nf-neon-p:   #b400ff;   /* electric purple */
+  --nf-terminal: #00ff88;   /* hacker green for code/diagnostic vibes */
+  --nf-shadow:   #050507;   /* near-black with a violet undertone */
+  --nf-night:    #0a0612;   /* slightly less near-black */
+  --nf-rust:     #4a1010;   /* rusted blood */
+
+  /* Override VitePress brand */
+  --vp-c-brand-1: var(--nf-blood-2);
+  --vp-c-brand-2: var(--nf-blood);
+  --vp-c-brand-3: var(--nf-rust);
+  --vp-c-brand-soft: rgba(255, 23, 68, 0.10);
+
+  /* Override page bg */
+  --vp-c-bg:        var(--nf-shadow);
+  --vp-c-bg-alt:    var(--nf-night);
+  --vp-c-bg-soft:   #100712;
+  --vp-c-bg-mute:   #1a0e22;
+  --vp-c-text-1:    #f0e4e0;
+  --vp-c-text-2:    #c5a3a3;
+  --vp-c-text-3:    #886060;
+  --vp-c-border:    #2a1820;
+  --vp-c-divider:   #2a1820;
+
+  /* Code blocks: terminal-green on near-black */
+  --vp-code-color:                var(--nf-terminal);
+  --vp-code-bg:                   #07020a;
+  --vp-code-block-bg:             #07020a;
+  --vp-code-block-divider-color:  #1a1020;
+
+  background:
+    radial-gradient(circle at 80% -10%, rgba(255, 0, 170, 0.06), transparent 50%),
+    radial-gradient(circle at -10% 110%, rgba(180, 0, 255, 0.05), transparent 50%),
+    var(--nf-shadow);
+}
+
+/* ─── Navigation ──────────────────────────────────────────── */
+body.is-nosferato .VPNav {
+  background: rgba(10, 6, 18, 0.92);
+  backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid var(--nf-rust);
+  box-shadow: 0 0 32px rgba(255, 23, 68, 0.08);
+}
+
+body.is-nosferato .VPNavBarTitle .title {
+  font-family: 'Major Mono Display', monospace;
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, var(--nf-blood-2), var(--nf-neon-m));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.is-nosferato .VPNavBarTitle .title::before {
+  content: '🦇 ';
+  -webkit-text-fill-color: initial;
+  background: none;
+}
+
+/* ─── Sidebar ──────────────────────────────────────────────── */
+body.is-nosferato .VPSidebar {
+  background: var(--nf-shadow);
+  border-right: 1px solid var(--nf-rust);
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(255, 23, 68, 0.03) 32px);
+}
+
+body.is-nosferato .VPSidebarItem.level-0 > .item .text {
+  font-family: 'Major Mono Display', monospace;
+  letter-spacing: 0.06em;
+  color: var(--nf-blood-2);
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+/* ─── Headings ─────────────────────────────────────────────── */
+body.is-nosferato h1,
+body.is-nosferato h2 {
+  font-family: 'Major Mono Display', 'JetBrains Mono', monospace;
+  letter-spacing: 0.04em;
+}
+
+body.is-nosferato h1 {
+  background: linear-gradient(135deg, var(--nf-blood-2), var(--nf-neon-m) 60%, var(--nf-neon-p));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 28px rgba(255, 0, 170, 0.15);
+}
+
+body.is-nosferato h2 {
+  color: var(--nf-blood-2);
+  position: relative;
+  padding-bottom: 0.3em;
+  border-bottom: 1px dashed var(--nf-rust);
+}
+body.is-nosferato h2::before {
+  content: '▙ ';
+  color: var(--nf-neon-m);
+  font-family: monospace;
+  opacity: 0.5;
+}
+
+body.is-nosferato h3 {
+  color: var(--nf-neon-m);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.03em;
+}
+
+body.is-nosferato h3::before {
+  content: '▶ ';
+  color: var(--nf-blood-2);
+  opacity: 0.7;
+}
+
+/* ─── Blockquotes — vampire whisper ─────────────────────── */
+body.is-nosferato blockquote {
+  border-left: 3px solid var(--nf-blood-2);
+  background: linear-gradient(90deg, rgba(255, 23, 68, 0.06), transparent);
+  padding: 1em 1.25em;
+  margin: 1.5em 0;
+  font-family: 'Special Elite', 'JetBrains Mono', monospace;
+  font-style: italic;
+  color: var(--nf-bone);
+  position: relative;
+}
+
+body.is-nosferato blockquote::before {
+  content: '🩸';
+  position: absolute;
+  left: -16px;
+  top: -8px;
+  font-size: 1.2em;
+  opacity: 0.7;
+}
+
+/* ─── Links ─────────────────────────────────────────────── */
+body.is-nosferato a {
+  color: var(--nf-neon-m);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--nf-rust);
+  transition: color 0.15s, border-color 0.15s, text-shadow 0.15s;
+}
+body.is-nosferato a:hover {
+  color: var(--nf-blood-2);
+  border-bottom-color: var(--nf-blood-2);
+  text-shadow: 0 0 8px rgba(255, 23, 68, 0.5);
+}
+
+/* ─── Code blocks ──────────────────────────────────────── */
+body.is-nosferato div[class*='language-'] {
+  border: 1px solid var(--nf-rust);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 23, 68, 0.05),
+    0 0 24px rgba(0, 0, 0, 0.5);
+}
+
+body.is-nosferato div[class*='language-']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent, var(--nf-blood-2) 30%, var(--nf-neon-m) 50%, var(--nf-blood-2) 70%, transparent);
+}
+
+body.is-nosferato code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body.is-nosferato :not(pre) > code {
+  color: var(--nf-terminal);
+  background: rgba(0, 255, 136, 0.06);
+  border: 1px solid rgba(0, 255, 136, 0.18);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* ─── Custom containers (::: tip / warning / details) ───── */
+body.is-nosferato .custom-block.tip {
+  border-color: var(--nf-neon-m);
+  background: linear-gradient(135deg, rgba(255, 0, 170, 0.04), rgba(180, 0, 255, 0.04));
+  position: relative;
+}
+body.is-nosferato .custom-block.tip .custom-block-title {
+  color: var(--nf-neon-m);
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85em;
+}
+
+body.is-nosferato .custom-block.warning {
+  border-color: var(--nf-blood-2);
+  background: linear-gradient(135deg, rgba(255, 23, 68, 0.06), rgba(120, 0, 50, 0.04));
+}
+body.is-nosferato .custom-block.warning .custom-block-title {
+  color: var(--nf-blood-2);
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+body.is-nosferato .custom-block.danger {
+  border-color: var(--nf-blood);
+  background: linear-gradient(135deg, rgba(180, 0, 30, 0.10), rgba(60, 0, 10, 0.06));
+}
+
+body.is-nosferato .custom-block.details {
+  border-color: var(--nf-rust);
+  background: rgba(15, 5, 20, 0.6);
+}
+body.is-nosferato .custom-block.details summary {
+  color: var(--nf-neon-m);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ─── Tables — racing-stripe accent ───────────────────── */
+body.is-nosferato table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--nf-rust);
+  background: rgba(15, 5, 20, 0.4);
+}
+body.is-nosferato table th {
+  background: linear-gradient(90deg, var(--nf-rust), transparent);
+  color: var(--nf-blood-2);
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85em;
+}
+body.is-nosferato table tr:hover td {
+  background: rgba(255, 23, 68, 0.03);
+}
+
+/* ─── Hero — for /nosferato/ index ────────────────────── */
+body.is-nosferato .VPHero .name {
+  background: linear-gradient(135deg, var(--nf-blood-2), var(--nf-neon-m), var(--nf-neon-p));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Major Mono Display', monospace;
+  text-shadow: 0 0 40px rgba(255, 0, 170, 0.2);
+}
+
+/* ─── Footer ──────────────────────────────────────────── */
+body.is-nosferato .VPFooter {
+  border-top: 1px solid var(--nf-rust);
+  background: rgba(10, 6, 18, 0.6);
+  color: var(--nf-bone);
+}
+body.is-nosferato .VPFooter::before {
+  content: '🦇  nos · fera · rato  🩸';
+  display: block;
+  text-align: center;
+  font-family: 'Special Elite', monospace;
+  color: var(--nf-blood-2);
+  letter-spacing: 0.3em;
+  font-size: 0.75em;
+  padding-bottom: 1em;
+  opacity: 0.6;
+}
+
+/* ─── Horizontal rules — fang dividers ───────────────── */
+body.is-nosferato hr {
+  border: none;
+  height: 1em;
+  margin: 2em 0;
+  background: none;
+  text-align: center;
+  position: relative;
+}
+body.is-nosferato hr::before {
+  content: '▼ 🦇 ▼';
+  color: var(--nf-blood-2);
+  font-size: 0.85em;
+  letter-spacing: 0.3em;
+  opacity: 0.55;
+}
+
+/* ─── Anchor scroll-margin (so #links land below sticky nav) ─ */
+body.is-nosferato h1, body.is-nosferato h2,
+body.is-nosferato h3, body.is-nosferato h4 {
+  scroll-margin-top: 5rem;
+}
+
+/* ─── Subtle scanlines on the whole page (terminal vibes) ── */
+body.is-nosferato::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 2px,
+    rgba(255, 23, 68, 0.012) 3px,
+    transparent 4px
+  );
+  mix-blend-mode: screen;
+}
