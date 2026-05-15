@@ -1,0 +1,20 @@
+NearTrace Docs
+Copyright 2026 HARTLE.TECH (NIPC 518241327, Porto, Portugal)
+
+Public documentation site for NearTrace, an Android BLE network-discovery
+tool developed at HARTLE.TECH (https://hartle.tech).
+Contact: contact@hartle.tech
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+──────────────────────────────────────────────────────────────────────────────
+
+Per the Apache License, Section 4(c): any Derivative Work distributed must
+preserve this NOTICE file unchanged and surface the credit
+"NearTrace — © HARTLE.TECH" wherever third-party attribution is displayed.
+
+──────────────────────────────────────────────────────────────────────────────
+
+Third-party dependencies (VitePress, Vue, Vite, etc.) are listed in
+package.json and each retains its own license. This NOTICE applies to the
+HARTLE.TECH-authored documentation content + site config.
